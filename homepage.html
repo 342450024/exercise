@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<style>
+		  .wrapper{
+        width: 100%;
+        height: 100%;
+      }
+      /*头部*/
+      .wrapper .header{
+        width: 100%;
+        height: 35px;
+        line-height: 31.5px;
+        background: url(img/head.png);
+        text-align: center;
+        position: relative;
+      }
+      .wrapper .header span{
+        font-family: helvetica;
+        font-size: 18px;
+        color: #fff;
+        float: right;
+        margin-right: 15px;
+      }
+      .wrapper .header span:before{
+        content: "";
+        width: 20px;
+        height: 26px;
+        position: absolute;
+        top: 4px;
+        left: 5px;
+        background: url(img/icon.png) no-repeat -206px -1px;
+      }
+      /*头像区*/
+      .wrapper .shang{
+        height: 45%;
+        /*height: 240px;*/
+        background: #cc0242;
+      }
+      .wrapper .shang .wz{
+        width: 85%;
+        height: 77%;
+        text-align: center;
+        margin-left: 10%;
+        position: relative;
+      }
+      .wrapper .shang .wz .wenz{
+        width: 100%;
+      }
+      .wrapper .shang .wz .name{
+        font-size: 16px;
+        color: #fff;
+        margin-top: 16px;
+      }
+      .wrapper .shang .wz .jies{
+        font-size: 12px;
+        margin-top: 6px;
+        color: rgba(255,255,255,0.5);
+      }
+      .wrapper .shang .wz .qianm{
+        font-size: 18px;
+        margin-top: 17px;
+        color: rgba(255,255,255,0.7);
+      }
+      .wrapper .shang .wz .wenz .tx{
+        width: 73px;
+        height: 73px;
+        border: 5px solid #d83d6e;
+        border-radius: 50%;
+        display: inline-block;
+        margin-top: 12px;
+        background: url(img/dog.png) no-repeat -5px -1px;
+      }
+      /*数字*/
+      .wrapper .num{
+        height: 10%;
+        /*height: 48px;*/
+        margin-top: -1px;
+        background: #c13345;
+      }
+      .wrapper .num div{
+        width: 23%;
+        height: 30px;
+        margin-top: 5%;
+        font-size: 11px;
+        color: rgba(255,255,255,0.7);
+        border-right: 1px solid rgba(255,255,255,0.7);
+        display: inline-block;
+        text-align: center;
+      }
+      .wrapper .num .num4{
+        border: 0px;
+      }
+      .wrapper .num div p:first-child{
+        font-size: 16px;
+        color: rgba(255,255,255,0.8);
+        margin-top: -10px;
+      }
+      /*详细介绍列表*/
+      .wrapper .tabulation{
+        margin-bottom: 50px;
+      }
+      /*顶部三块*/
+      .wrapper .tabulation{
+        position: relative;
+      }
+      .wrapper .tabulation .ul-tab-btn{
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 0;
+        color: #000;
+      }
+      .wrapper .tabulation .ul-tab-btn li{
+        display: inline-block;
+        width: 32.3%;
+        height: 40px;
+        font-size: 16px;
+        text-align: center;
+      }
+      .tabulation .xian{
+        width: 32%;
+        position: absolute;
+        top: 38px;
+        border-bottom: 2px solid #d50000;
+      }
+      /*内容*/
+      .wrapper .tabulation .content{
+        width: 100%;
+        overflow: hidden;
+      }
+      .wrapper .tabulation .content .ul-tab-content{
+        width: 400%;
+        margin-left: 0px;
+        font-size: 0;
+      }
+      .wrapper .tabulation .content .ul-tab-content li{
+        width: 25%;
+        height: 280px;
+        background: #ededed;
+        font-size: 16px;
+        display: inline-block;
+      }
+      .wrapper .tabulation .content .ul-tab-content li b{
+        display: inline-block;
+        width: 94%;
+        height: 47px;
+        line-height: 47px;
+        margin-left: 3%;
+        font-size: 16px;
+        border-bottom: 1px solid #767676;
+      }
+      .tabulation .content .ul-tab-content li b a{
+        float: right;
+        margin-right: 14px;
+        font-size: 13px;
+        color: rgba(0,0,0,0.6);
+        position: relative;
+      }
+      .tabulation .content .ul-tab-content li b a:after{
+        content: "";
+        width: 14px;
+        height: 25px;
+        position: absolute;
+        top: 12px;
+        right: -14px;
+        background: url(img/icon.png) no-repeat -251px -2px;
+      }
+      .tabulation .content .ul-tab-content li b .sex{
+        width: 10px;
+        height: 47px;
+        background: url(img/icon.png) no-repeat -170px 8px;
+        padding-right: 9px;
+      }
+      /*底部*/
+      .wrapper .footer{
+        width: 100%;
+        height: 49px;
+        position: fixed;
+        bottom: 0px;
+        background: #fff;
+      }
+      .wrapper .footer span{
+        display: inline-block;
+        width: 23%;
+        height: 40px;
+        line-height: 64px;
+        text-align: center;
+        margin-top:9px ;
+        border-right: 1px solid #a6a6a6;
+        font-size: 14px;
+        position: relative;
+      }
+      .wrapper .footer .sp1:before,.sp2:before,.sp3:before,.sp4:before{
+        content: "";
+        width: 33px;
+        height: 25px;
+        position: absolute;
+        top: -4px;
+        left: 29%;
+      }
+      .wrapper .footer .sp1:before{
+        background: url(img/icon1.png) no-repeat -213px -77px;
+      }
+      .wrapper .footer .sp2:before{
+        background: url(img/icon1.png) no-repeat -176px -82px;
+      }
+      .wrapper .footer .sp3:before{
+        background: url(img/icon1.png) no-repeat -208px -35px;
+      }
+      .wrapper .footer .sp4:before{
+        background: url(img/icon1.png) no-repeat -167px -36px;
+      }
+      .wrapper .footer .sp1{
+        margin-left: 2%;
+      }
+      .wrapper .footer .sp4{
+        border: 0px;
+      }
+		</style>
+	</head>
+	<body>
+	  <div class="wrapper">
+	    <!--头部-->
+	    <div class="header">
+        <span>编辑资料</span>
+      </div>
+      <div class="shang">
+        <!--简单的文字介绍-->
+        <div class="wz">
+          <div class="wenz">
+            <em class="tx"></em><!--头像-->
+            <p class="name">超级无敌凌凌漆</p>
+            <p class="jies">2岁   大咖秀金牌主播</p>
+            <p class="qianm">一万年太久，爱我，就现在。。。</p>
+          </div>
+        </div>
+      </div>
+      <!--统计的数字-->
+      <div class="num">
+          <div class="num1">
+            <p>332.8万</p>
+            <p>人气</p>
+          </div>
+          <div class="num2">
+            <p>521.8万</p>
+            <p>粉丝</p>
+          </div>
+          <div class="num3">
+            <p>85210</p>
+            <p>好评</p>
+          </div>
+          <div class="num4">
+            <p>66886</p>
+            <p>关注</p>
+          </div>
+      </div>
+      <div class="tabulation">
+          <span class="xian"></span>
+          <ul class="ul-tab-btn clearfix">
+            <li>个人资料</li>
+            <li>企业家族</li>
+            <li>我的财产</li>
+          </ul>
+        <!--内容-->
+        <div class="content">
+          <ul class="ul-tab-content clearfix">
+            <li>
+              <b>咖咖号<a>1083666</a></b>
+              <b>简介<a>做狗如果没有梦想，那跟咸鱼...</a></b>
+              <b>姓名<a>秋香家的旺财</a></b>
+              <b>性别<a class="sex"></a></b>
+              <b>生日<a>2015.9.11</a></b>
+            </li>
+            <li>
+              <b>咖<a>1083666</a></b>
+              <b>简介<a>做狗如果没有梦想，那跟咸鱼...</a></b>
+              <b>姓名<a>秋香家的旺财</a></b>
+              <b>性别<a class="sex"></a></b>
+              <b>生日<a>2015.9.11</a></b>
+            </li>
+            <li>
+            <b>咖号<a>1083666</a></b>
+              <b>简介<a>做狗如果没有梦想，那跟咸鱼...</a></b>
+              <b>姓名<a>秋香家的旺财</a></b>
+              <b>性别<a class="sex"></a></b>
+              <b>生日<a>2015.9.11</a></b>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--底部-->
+      <div class="footer">
+        <span class="sp1">直播</span>
+        <span class="sp2">社区</span>
+        <span class="sp3">商城</span>
+        <span class="sp4">个人</span>
+      </div>
+	  </div>
+	  <script type="text/javascript" src="js/zepto.js" ></script>
+	  <script>
+      var index= 0;
+      var w=$('.tabulation .xian').width();
+      var ww = $('.ul-tab-content li').width();
+      var l = $('.tabulation .xian').offset().left;
+      //点击选项卡
+      $('.ul-tab-btn li').click(function(){
+        index= $(this).index();
+        console.log(index);
+        $('.tabulation .xian').animate({
+          left:w*index
+          
+        })
+        console.log(l);
+        $('.ul-tab-content').animate({
+          marginLeft:-ww*index
+        },400,'linear')
+      })
+      //滑动
+      $('.content li').swipeLeft(function(){
+        index = $(this).index()+1;
+        a();
+      })
+      $('.content li'). swipeRight(function(){
+        index = $(this).index()-1;
+        a();
+      })
+      function a(){
+        if(index >= 3||index <0){
+          return;
+        }
+        $('.tabulation .xian').animate({
+          left:w*index
+        })
+        $('.content .ul-tab-content').animate({
+          marginLeft:-ww*index
+        })
+      }
+    </script>
+	</body>
+</html>

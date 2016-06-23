@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<style>
+		  .wrapper{
+        width: 100%;
+        height: 100%;
+        background: #ededed;
+      }
+      /*头部*/
+      .wrapper .header{
+        width: 100%;
+        height: 31.5px;
+        line-height: 31.5px;
+        background: url(img/head.png);
+        text-align: center;
+        position: relative;
+        box-shadow: 0px 1px 3px #000;
+        z-index: 2;
+      }
+      .wrapper .header span{
+        font-family: helvetica;
+        font-size: 18px;
+        color: #fff;
+        margin-right: 15px;
+      }
+      .wrapper .header span:before{
+        content: "";
+        width: 20px;
+        height: 26px;
+        position: absolute;
+        top: 4px;
+        left: 5px;
+        background: url(img/icon.png) no-repeat -147px 2px;
+      }
+      /*搜索框*/
+      .wrapper .search{
+        position: absolute;
+        top: 38px;
+        left: 15%;
+        z-index: 2;
+        width: 61%;
+        height: 28px;
+        padding-left: 30px;
+        border-radius: 7px;
+        border: 0px;
+        background: rgba(255,255,255,0.3);
+      }
+      .wrapper .search_icon{
+        width: 25px;
+        height: 28px;
+        display: inline-block;
+        position: absolute;
+        top: 36px;
+        left: 50px;
+        background: url(img/icon.png) no-repeat -116px -20px;
+        z-index: 3;
+      }
+      /*轮播图*/
+     .carousel {
+        width: 100%;
+        height: 90px;
+        position: relative;
+      }
+      
+      .carousel .swipe {
+        overflow: hidden;
+        visibility: hidden;
+        position: relative;
+        height: 100%;
+      }
+      
+      .carousel .swipe .swipe-wrap {
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .carousel .swipe .swipe-wrap > figure {
+        float: left;
+        width: 100%;
+        position: relative;
+      }
+      
+      .face {
+        height: 125px;
+      }
+      
+      figure {
+        margin: 0;
+        /* 对齐，四周宽度都为0，在轮播的时候，以整张图片进行移动 */
+      }
+      
+      .carousel nav {
+        position: absolute;
+        top: 80%;
+        left: 78%;
+      }
+      
+      .carousel nav #position {
+        text-align: center;
+        list-style: none;
+        margin: 0;
+        padding: 0
+      }
+      
+      .carousel nav #position li {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 100%;
+        background: #A8A8A8;
+        margin: 0 2px;
+        cursor: pointer
+      }
+      
+      .carousel nav #position li.on {
+        background: white;
+      }
+      
+      /*中间导航栏*/
+      .mall-nav{
+        height: 40px;
+        margin-top: 8px;
+        background: #fff;
+      }
+      .mall-nav ul{
+        font-size: 0;
+      }
+      .mall-nav ul li{
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        font-size: 15px;
+        margin: 5px 24px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 6px;
+        color: #fff;
+      }
+      .mall-nav .nav-li1{
+        background: #fb1c6e;
+      }
+      .mall-nav .nav-li2{
+        background: #fb1c9f;
+      }
+      .mall-nav .nav-li3{
+        background: #fb1c4b;
+      }
+      .mall-nav .nav-li4{
+        background: #ce1cfb;
+      }
+      /*展示*/
+      .zhans{
+        height: 106px;
+        margin-top: 8px;
+      }
+      .zhans ul{
+        font-size: 0;
+      }
+      .zhans ul li{
+        width: 49%;
+        height: 106px;
+        display: inline-block;
+      }
+      .zhans ul li img{
+        width: 100%;
+        height: 100%;
+      }
+      .zhans ul .zhans-li1{
+        margin-right: 2%;
+      }
+      /*必抢*/
+      .shop{
+        text-align: center;
+        height: 70%;
+        margin-bottom: 50px;
+      }
+      .shop hr{
+        display: inline-block;
+        width: 183px;
+        height: 1px;
+        margin-top: 16px;
+        background: #e90000;
+        color: #c90000;
+        position: relative;
+      }
+      .shop hr:before{
+        content: "必抢";
+        width: 30px;
+        font-size: 13px;
+        position: absolute;
+        top: -10px;
+        left: 75px;
+        background: #ededed;
+      }
+      .shop ul{
+        font-size: 0;
+        margin-top: 8px;
+      }
+      .shop .shop-ul1 li{
+        display: inline-block;
+        width: 25%;
+        height: 92px;
+      }
+      .shop .shop-ul2 li{
+        width: 100%;
+        height: 98px;
+        margin-bottom: 8px;
+      }
+      .shop ul li img{
+        width: 100%;
+        height: 100%;
+      }
+      
+      /*底部*/
+      .wrapper .footer{
+        width: 100%;
+        height: 49px;
+        position: fixed;
+        bottom: 0px;
+        background: #fff;
+      }
+      .wrapper .footer span{
+        display: inline-block;
+        width: 23%;
+        height: 40px;
+        line-height: 64px;
+        text-align: center;
+        margin-top:9px ;
+        border-right: 1px solid #a6a6a6;
+        font-size: 14px;
+        position: relative;
+      }
+      .wrapper .footer .sp1:before,.sp2:before,.sp3:before,.sp4:before{
+        content: "";
+        width: 33px;
+        height: 25px;
+        position: absolute;
+        top: -4px;
+        left: 29%;
+      }
+      .wrapper .footer .sp1:before{
+        background: url(img/icon1.png) no-repeat -216px -77px;
+      }
+      .wrapper .footer .sp2:before{
+        background: url(img/icon1.png) no-repeat -176px -82px;
+      }
+      .wrapper .footer .sp3:before{
+        background: url(img/icon1.png) no-repeat -208px -9px;
+      }
+      .wrapper .footer .sp4:before{
+        background: url(img/icon1.png) no-repeat -167px -10px;
+      }
+      .wrapper .footer .sp1{
+        margin-left: 2%;
+      }
+      .wrapper .footer .sp4{
+        border: 0px;
+      }
+		</style>
+	</head>
+	<body>
+	  <div class="wrapper">
+	    <div class="header">
+        <span>宠物商城</span>
+      </div>
+      <!--搜索框-->
+      <i class="search_icon"></i>
+      <input type="text" value="" placeholder="秒杀季  买到就是赚到" class="search"/>
+      <!--轮播图-->
+      <div class="carousel">
+        <div id="slider" class="swipe" style="visibility:visible;">
+          <div class="swipe-wrap">
+            <figure>
+              <div class="face faceInner">
+                <img src="img/banner.jpg" width="100%" height="100%" />
+              </div>
+            </figure>
+            <figure>
+              <div class="face faceInner">
+                <img src="img/banner2.jpg" width="100%" height="100%" />
+              </div>
+            </figure>
+            <figure>
+              <div class="face faceInner">
+                <img src="img/banner3.jpg" width="100%" height="100%" />
+              </div>
+            </figure>
+          </div>
+        </div>
+        <nav>
+          <ul id="position">
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </nav>
+      </div>
+      <!--中间导航栏-->
+      <nav class="mall-nav">
+        <ul>
+          <li class="nav-li1">食</li>
+          <li class="nav-li2">衣</li>
+          <li class="nav-li3">洗</li>
+          <li class="nav-li4">约</li>
+        </ul>
+      </nav>
+      <!--展示-->
+      <div class="zhans">
+        <ul>
+          <li class="zhans-li1"><a><img src="img/commodity5.jpg"/></a></li>
+          <li class="zhans-li2"><a><img src="img/commodity4.jpg"/></a></li>
+        </ul>
+      </div>
+      <!--必抢-->
+      <div class="shop">
+        <hr/>
+        <ul class="shop-ul1">
+          <li class="shop-li1"><a><img src="img/commodity3.jpg"/></a></li>
+          <li class="shop-li2"><a><img src="img/commodity1.jpg"/></a></li>
+          <li class="shop-li3"><a><img src="img/commodity2.jpg"/></a></li>
+          <li class="shop-li4"><a><img src="img/commodity6.jpg"/></a></li>
+        </ul>
+        <ul class="shop-ul2">
+          <li class="shop-li5"><a><img src="img/banner2.jpg"/></a></li>
+          <li class="shop-li6"><a><img src="img/banner.jpg"/></a></li>
+        </ul>
+      </div>
+      <!--底部-->
+      <div class="footer">
+        <span class="sp1">直播</span>
+        <span class="sp2">社区</span>
+        <span class="sp3">商城</span>
+        <span class="sp4">个人</span>
+      </div>
+	  </div>
+	  <script type="text/javascript" src="js/swipe.js" ></script>
+    <script>
+      var slider =
+        Swipe(document.getElementById('slider'), {
+          auto: 3000,
+          continuous: true,
+          disableScroll: false,
+          callback: function(pos) {
+            var i = bullets.length;
+            while (i--) {
+              bullets[i].className = ' ';
+            }
+            bullets[pos].className = 'on';
+          }
+        });
+      var bullets = document.getElementById('position').getElementsByTagName('li');
+    </script>
+	</body>
+</html>

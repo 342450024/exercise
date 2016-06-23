@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <title></title>
+    <style>
+    body{
+      height: 100%;
+      overflow: hidden;
+    }
+      #wrap {
+        -webkit-box-orient: vertical;
+        height: 100%;
+        background: #EDEDED;
+        
+      }
+      .header {
+        height:135px;
+      }
+      
+      .content {
+        overflow-y: auto;
+        width: 100%;
+      }
+      
+     
+      
+      
+      
+      
+      .head {
+        height: 45px;
+        background: url(img/head.png);
+        text-align: center;
+        line-height: 45px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 20px;
+      }
+      
+      .head:before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 15px;
+        width: 35px;
+        height: 35px;
+        background: url(img/dog.jpg);
+        background-size: 100% 100%;
+        border-radius: 100%;
+      }
+      
+      .head:after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 85%;
+        width: 40px;
+        height: 40px;
+        background: url(img/icon.png) 128px -28px;
+      }
+      
+      .head_nav_ul {
+        font-size: 0;
+      }
+      
+      .head_nav_ul li {
+        font-size: 15px;
+        height: 40px;
+        background: white;
+        display: inline-block;
+        width: 33%;
+        text-align: center;
+        line-height: 40px;
+      }
+      
+      .on {
+        color: red;
+      }
+      
+      .head_slide_ul {
+        background: white;
+        font-size: 0;
+        margin-top: 5px;
+        position: relative;
+      }
+      .head_slide_ul:after{
+        content: "";
+        position: absolute;
+        /*background: black;*/
+        width: 20px;
+        height: 20px;
+        background: black;
+        top: 9px;
+        left: 94%;
+        background: url(img/icon.png) -247px -5px;
+      }
+      .head_slide_ul li {
+        width: 25%;
+        height: 38px;
+        display: inline-block;
+        text-align: center;
+        /*padding:5px 0;*/
+      }
+      
+      .head_slide_ul a {
+        margin-top: 2px;
+        display: inline-block;
+        width: 54%;
+        height: 33px;
+        background-size:100% 100%;
+        border-radius:5px ;
+      }
+      
+      .head_slide_ul_a1 {
+        background: url(img/22.jpg);
+      }
+      
+      .head_slide_ul_a2 {
+        background:url(img/22222.jpg);
+      }
+      
+      .head_slide_ul_a3 {
+        background: url(img/222.jpg);
+      }
+      
+      .head_slide_ul_a4 {
+        background:url(img/2.jpg);
+      }
+     
+     
+     
+     
+/*     直播内容*/
+     
+      .content_ul{
+        font-size:0 ;
+        width: 100%;
+      }
+     .content_ul li{
+       width: 100%;
+       height: 200px;
+       background-size:100% 100%;
+     }
+      .content_ul_li1{
+        background: url(img/gou.jpg);
+      }
+      .content_ul_li2{
+        background: url(img/mao.jpg);
+      }
+      .content_ul_li3{
+        background: url(img/gou.jpg);
+      }
+      
+      
+    
+    
+    
+    
+    
+     .foot {
+        height: 50px;
+        background: white;
+      }
+      
+      .foot_ul {
+        font-size: 0;
+        height: 50px;
+        width: 100%;
+      }
+      
+      .foot_ul>li {
+        
+        display: inline-block;
+        width: 24.7%;
+        height: 100%;
+        font-size: 13px;
+        border-left: 1px solid #A8A8A8;
+        position: relative;
+      }
+      
+      .foot_ul .foot_ul_li1 {
+        border-left: none;
+      }
+      
+      .foot_ul>li>span {
+        display: inline-block;
+        width:100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      
+      .foot_ul li span:before {
+        content: "";
+        width: 32px;
+        height: 30px;
+        position: absolute;
+        left: 50%;
+        top: -28px;
+        margin-left: -16px;
+      }
+      
+      .foot_ul_li_span1:before {
+        background: url(img/icon.png) 0px -70px;
+      }
+      
+      .foot_ul_li_span2:before {
+        background: url(img/icon.png) -39px -33px;
+      }
+      
+      .foot_ul_li_span1 {
+        color: red;
+      }
+      
+      .foot_ul_li_span3:before {
+        background: url(img/icon.png) -80px -33px;
+      }
+      
+      .foot_ul_li_span4:before {
+        background: url(img/icon.png) -120px -33px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box-flex" id="wrap">
+      <div class="header">
+        <div class="head">现场</div>
+        <div class="head_nav">
+          <ul class="head_nav_ul">
+            <li class="on">热门</li>
+            <li>最新</li>
+            <li>关注</li>
+          </ul>
+        </div>
+        <div class="head_slide">
+          
+          <ul class="head_slide_ul">
+            <li>
+              <a class="head_slide_ul_a1"></a>
+            </li>
+            <li>
+              <a class="head_slide_ul_a2"></a>
+            </li>
+            <li>
+              <a class="head_slide_ul_a3"></a>
+            </li>
+            <li>
+              <a class="head_slide_ul_a4"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content box-flex-item">
+        <ul class="content_ul">
+          <li class="content_ul_li1"></li>
+          <li class="content_ul_l i2"></li>
+          <li class="content_ul_li3"></li>
+        </ul>
+      </div>
+       <div class="foot">
+        <ul class="foot_ul">
+          <li class="foot_ul_li1"><span class="foot_ul_li_span1"><a href="DirectSeeding.html">直播</a></span></li>
+          <li><span class="foot_ul_li_span2"><a href ="community.html">社区</a></span></li>
+          <li><span class="foot_ul_li_span3"><a href="shopping.html">商城</a></span></li>
+          <li><span class="foot_ul_li_span4"><a href="homepage.html">个人</a></span></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

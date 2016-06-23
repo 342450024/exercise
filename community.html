@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <title></title>
+    <style>
+    body{
+      height: 100%;
+      overflow: hidden;
+    }
+      /*   模型盒子*/
+      
+      .header {
+        height: 215px;
+      }
+      
+      #content {
+        overflow-y: auto;
+        width: 100%;
+      }
+      
+      #wrap {
+        -webkit-box-orient: vertical;
+        height: 100%;
+        background: #EDEDED;
+      }
+      
+      .head {
+        height: 45px;
+        background: url(img/head.png);
+        text-align: center;
+        line-height: 45px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 20px;
+      }
+      
+      .head:before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 15px;
+        width: 35px;
+        height: 35px;
+        background: url(img/dog.jpg);
+        background-size: 100% 100%;
+        border-radius: 100%;
+      }
+      
+      .head:after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 85%;
+        width: 40px;
+        height: 40px;
+        background: url(img/icon.png) 128px -28px;
+      }
+      /*swiper插件*/
+      
+      .carousel {
+        width: 100%;
+        height: 90px;
+        position: relative;
+        margin-top: 10px;
+      }
+      
+      .carousel .swipe {
+        overflow: hidden;
+        visibility: hidden;
+        position: relative;
+        height: 100%;
+      }
+      
+      .carousel .swipe .swipe-wrap {
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .carousel .swipe .swipe-wrap > figure {
+        float: left;
+        width: 100%;
+        position: relative;
+      }
+      
+      .face {
+        height: 125px;
+      }
+      
+      figure {
+        margin: 0;
+        /* 对齐，四周宽度都为0，在轮播的时候，以整张图片进行移动 */
+      }
+      
+      .carousel nav {
+        position: absolute;
+        top: 80%;
+        left: 78%;
+      }
+      
+      .carousel nav #position {
+        text-align: center;
+        list-style: none;
+        margin: 0;
+        padding: 0
+      }
+      
+      .carousel nav #position li {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 100%;
+        background: #A8A8A8;
+        margin: 0 2px;
+        cursor: pointer
+      }
+      
+      .carousel nav #position li.on {
+        background: white;
+      }
+      
+      .hot_ul {
+        margin-top: 10px;
+        background: white;
+        position: relative;
+      }
+      
+      .hot_ul:before {
+        content: "热";
+        color: white;
+        text-align: center;
+        line-height: 16px;
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        border-radius: 100%;
+        background: red;
+        top: 3px;
+        left: 8%;
+      }
+      
+      .hot_ul li {
+        display: inline-block;
+        width: 49%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-bottom: 1px solid #EDEDED;
+      }
+      
+      .information {
+        overflow-y: auto;
+      }
+      
+      .information_ul {
+        margin-top: 10px;
+        background: #EDEDED;
+      }
+      
+      .information_ul li {
+        background: white;
+        height: 10%;
+        border-bottom: 1px solid #EDEDED;
+        padding-left: 50px;
+        font-size: 15px;
+        line-height: 44px;
+        position: relative;
+      }
+      
+      .information_ul li:before {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        left: 15px;
+        border-radius: 5px;
+      }
+      
+      .information_ul li:after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 30px;
+        background: #A8A8A8;
+        background: url(img/icon.png) -240px 0px;
+        top: 10px;
+        left: 90%;
+        border-radius: 5px;
+      }
+      
+      .information_ul .li1:before {
+        background: #F4017F;
+      }
+      
+      .information_ul .li2:before {
+        background: #F500E1;
+      }
+      
+      .information_ul .li3:before {
+        background: #A200F4;
+      }
+      
+      .information_ul .li4:before {
+        background: #EBF500;
+      }
+      
+      .information_ul .li_use:before {
+        background: #00F6AD;
+      }
+      
+      .information_ul .li_game:before {
+        background: #46F600;
+      }
+      
+      .information_ul .li_use {
+        margin: 10px 0;
+      }
+      
+      .information_ul li span {
+        float: right;
+        margin-right: 12%;
+        color: #ADADAD; 
+      }
+      
+      .foot {
+        height: 50px;
+        background: white;
+      }
+      
+      .foot_ul {
+        font-size: 0;
+        height: 50px;
+        width: 100%;
+      }
+      
+      .foot_ul>li {
+        
+        display: inline-block;
+        width: 24.7%;
+        height: 100%;
+        font-size: 13px;
+        border-left: 1px solid #A8A8A8;
+        position: relative;
+      }
+      
+      .foot_ul .foot_ul_li1 {
+        border-left: none;
+      }
+      
+      .foot_ul>li>span {
+        display: inline-block;
+        width:100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      
+      .foot_ul li span:before {
+        content: "";
+        width: 32px;
+        height: 30px;
+        position: absolute;
+        left: 50%;
+        top: -28px;
+        margin-left: -16px;
+      }
+      
+      .foot_ul_li_span1:before {
+        background: url(img/icon.png) 0px -33px;
+      }
+      
+      .foot_ul_li_span2:before {
+        background: url(img/icon.png) -39px -71px;
+      }
+      
+      .foot_ul_li_span2 {
+        color: red;
+      }
+      
+      .foot_ul_li_span3:before {
+        background: url(img/icon.png) -80px -33px;
+      }
+      
+      .foot_ul_li_span4:before {
+        background: url(img/icon.png) -120px -33px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap" class="box-flex">
+      <div class="header">
+        <div class="head">社区</div>
+
+        <!--   swiper插件-->
+        <div class="carousel">
+          <div id="slider" class="swipe" style="visibility:visible;">
+            <div class="swipe-wrap">
+              <figure>
+                <div class="face faceInner">
+                  <img src="img/12.jpg" width="100%" height="100%" />
+                </div>
+              </figure>
+              <figure>
+                <div class="face faceInner">
+                  <img src="img/22.jpg" width="100%" height="100%" />
+                </div>
+              </figure>
+              <figure>
+                <div class="face faceInner">
+                  <img src="img/222.jpg" width="100%" height="100%" />
+                </div>
+              </figure>
+              <figure>
+                <div class="face faceInner">
+                  <img src="img/2222.jpg" width="100%" height="100%" />
+                </div>
+              </figure>
+            </div>
+          </div>
+          <nav>
+            <ul id="position">
+              <li class="on"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="hot">
+          <ul class="hot_ul">
+            <li>#隔壁家的二..</li>
+            <li>#汪星人宝典#</li>
+            <li>#友谊的小船</li>
+            <li>热门咖秀</li>
+          </ul>
+        </div>
+      </div>
+      <div id="content" class="box-flex-item information">
+        <ul class="information_ul">
+          <li class="li1">消息</li>
+          <li class="li2">好友</li>
+          <li class="li3">附近的人<span>大家一起约</span></li>
+          <li class="li4">昨日之星</li>
+          <li class="li_use">应用推荐<span>大咖秀上线啦</span></li>
+          <li class="li_game">游戏世界<span>宠物大乱斗</span></li>
+          
+        </ul>
+      </div>
+      <div class="foot">
+        <ul class="foot_ul">
+          <li class="foot_ul_li1"><span class="foot_ul_li_span1">直播</span></li>
+          <li><span class="foot_ul_li_span2">社区</span></li>
+          <li><span class="foot_ul_li_span3">商城</span></li>
+          <li><span class="foot_ul_li_span4">个人</span></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/swipe.js"></script>
+    <script>
+      var slider =
+        Swipe(document.getElementById('slider'), {
+          auto: 3000,
+          continuous: true,
+          disableScroll: false,
+          callback: function(pos) {
+            var i = bullets.length;
+            while (i--) {
+              bullets[i].className = ' ';
+            }
+            bullets[pos].className = 'on';
+          }
+        });
+      var bullets = document.getElementById('position').getElementsByTagName('li');
+    </script>
+  </body>
+
+</html>

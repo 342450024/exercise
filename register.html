@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <title></title>
+    <style>
+      body {
+        overflow: hidden;
+        background: #EDEDED;
+      }
+      
+      .head {
+        height: 60px;
+        background: url(img/head.png);
+        text-align: center;
+        line-height: 60px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 20px;
+      }
+      
+      .head:before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 30px;
+        height: 34px;
+        background: black;
+        background: url(img/icon.png) -206px 0px;
+      }
+      
+      .content {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 15px;
+      }
+      
+      .user_information {
+        position: relative;
+      }
+      
+      .user_information li {
+        color: #878787;
+        font-size: 15px;
+        border-bottom: 1px solid #A8A8A8;
+      }
+      
+      .user_information li label {
+        display: inline-block;
+        width: 25%;
+        text-align: right;
+      }
+      
+      input {
+        height: 48px;
+        background: transparent;
+        border: none;
+        font-size: 15px;
+      }
+      
+      .content_save {
+        display: inline-block;
+        margin-top: 30px;
+        width: 100%;
+        height: 44px;
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        line-height: 44px;
+        background: #DD0D6A;
+        border-radius: 30px;
+        font-size: 15px;
+      }
+      
+      .user_information_prove {
+        display: inline-block;
+        position: absolute;
+        right: 5%;
+        top: 84%;
+        width: 100px;
+        height: 25px;
+        border-radius: 20px;
+        border: 3px solid #EB78AE;
+        text-align: center;
+        line-height: 25px;
+        color: #E44566;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="head">新用户注册</div>
+    <div class="content">
+      <ul class="user_information">
+        <li>
+          <label>用户名：</label><input type="text" />
+        </li>
+        <li>
+          <label>手机号码：</label><input type="text" />
+        </li>
+        <li>
+          <label>密码：</label><input type="text" />
+        </li>
+        <li>
+          <label>确认密码：</label><input type="text" />
+        </li>
+        <li>
+          <label>验证码：</label><input type="text" /><a class="user_information_prove">获取验证码</a>
+        </li>
+      </ul>
+
+      <a class="content_save">立即注册</a>
+    </div>
+  </body>
+
+</html>

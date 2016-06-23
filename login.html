@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <title></title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+      
+      .page2 {
+        background: url(img/login.jpg) no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+      }
+      
+      .page2_logo {
+        position: relative;
+        width: 80%;
+        height: 100px;
+        background: url(img/登录1.png);
+        background-size: 100% 100%;
+        margin: 0 auto;
+        top: 80px;
+      }
+      
+      .page2_user {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 35%;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      input {
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid white;
+        font-size: 18px;
+        color: white;
+        padding-left: 47px;
+      }
+      
+      input:-ms-input-placeholder {
+        color: white;
+      }
+      
+      input::-webkit-input-placeholder {
+        color: white;
+      }
+      
+      input:-moz-placeholder {
+        color: white;
+      }
+      
+      i {
+        position: absolute;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url(img/icon.png);
+      }
+      
+      .user_name_i {
+        top: 7px;
+        left: 14px;
+      }
+      
+      .user_pwd_i {
+        top: 60px;
+        left: 14px;
+        background-position: 243px 0px;
+      }
+      
+      .page2_login {
+        width: 83%;
+        margin: 0 auto;
+        margin-top: 24px;
+      }
+      
+      .login {
+        display: inline-block;
+        width: 100%;
+        height: 44px;
+        font-size: 15px;
+        background: #EA9502;
+        border-radius: 30px;
+        color: white;
+        text-align: center;
+        line-height: 44px;
+      }
+      
+      .register {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+        color: white;
+      }
+      
+      .register li {
+        display: inline-block;
+        font-size: 15px;
+      }
+      
+      .register span {
+        margin: 0 20px;
+      }
+      
+      .login_icon {
+        margin-top: 20px;
+        margin-left: 72%;
+      }
+      
+      .login_icon li {
+        width: 31px;
+        height: 30px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      
+      .login_icon_weixin {
+        background: url(img/icon.png) -81px 0px;
+      }
+      
+      .login_icon_qq {
+        background: url(img/icon.png) -121px 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page2">
+      <div class="page2_logo"></div>
+      <div class="page2_user">
+        <i class="user_name_i"></i><input class="user_name" type="text" placeholder="用户名" />
+        <i class="user_pwd_i"></i><input class="user_pwd" type="text" placeholder="********" />
+
+      </div>
+      <div class="page2_login">
+        <a class="login">立即登录</a>
+        <ul class="register">
+          <li>用户注册</li><span>|</span>
+          <li>忘记密码</li>
+        </ul>
+        <ul class="login_icon">
+          <li class="login_icon_weixin"></li>
+          <li class="login_icon_qq"></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>
